@@ -1,0 +1,57 @@
+<!-- Default form register -->
+
+<div class="container"  style="height: 100%;width: 100%;margin-top: 50px;">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 mb-lg-0 mb-4 ">
+
+<form class="text-center border border-light p-5" action="#!">
+
+    <h1 class="h4 mb-4" style="font-weight: bold;font-family:myfonts;">Sign up</h1>
+    <input [(ngModel)] = "registered.name" type="text" name="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="name">
+
+    <input [(ngModel)] = "registered.email" type="email" name="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+    <!-- Piassword -->
+    <input [(ngModel)] = "registered.password"  type="password"  name="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+        At least 8 characters and 1 digit
+    </small>
+
+    <!-- Phone number -->
+ 
+
+    <!-- Sign up button -->
+    <button (click)="registeruser()" class="btn btn-warning  info my-4 btn-block" type="submit">Sign in</button>
+
+    <!-- Social register -->
+    <p>or sign up with:</p>
+
+    <a type="button" class="light-blue-text mx-2">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <hr>
+
+    <!-- Terms of service -->
+    <p>By clicking
+        <em>Sign up</em> you agree to our
+        <a href="" target="_blank">terms of service</a>
+
+</form>
+<!-- Default form register -->
+</div>
+<div class="col-lg-6 col-md-6 mb-lg-0 mb-4">
+
+
+
+</div>
+</div></div>

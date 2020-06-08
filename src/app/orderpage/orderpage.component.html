@@ -1,0 +1,47 @@
+<section class="order-form my-4 mx-4">
+    <div class="container pt-4">
+
+      <div class="row">
+        <div class="col-12">
+          <h1>Enter Shipping Address</h1>
+         
+          <hr class="mt-1">
+        </div>
+        <div class="col-12">
+
+        
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label">Adress</label>
+            </div>
+            <div class="col-12">
+              <input [(ngModel)] = "orders.address1" name="address1" class="order-form-input" placeholder="Street Address">
+            </div>
+            <div class="col-12 mt-2">
+              <input [(ngModel)] = "orders.address2" name="address2" class="order-form-input" placeholder="Street Address Line 2">
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pr-sm-2">
+              <input [(ngModel)] = "orders.rigion" name="rigion" class="order-form-input" placeholder="Rigion">
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pl-sm-0">
+              <input [(ngModel)] = "orders.city" name="city" class="order-form-input" placeholder="City">
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pr-sm-2">
+              <input [(ngModel)] = "orders.pin" name="pin" class="order-form-input" placeholder="Postal / Zip Code">
+            </div>
+            
+          </div>
+
+        
+
+          <div class="row mt-3">
+            <div class="col-12">
+              <button (click)="orderdetail()" type="button" id="btnSubmit" class="btn btn-dark d-block mx-auto btn-submit">Submit</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>

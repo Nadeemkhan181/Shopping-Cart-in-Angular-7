@@ -1,0 +1,66 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-white"  [containerInside]="false" >
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a routerLink="/" class="navbar-brand" href="#" style="color: rgb(240, 105, 1);font-weight: bold;margin-left: 20px;font-size: 28px;"><mdb-icon fab icon="speakap" style="font-size: 27px;margin-right: 5px;"></mdb-icon>SHOPIFY</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto" >
+        <li class="nav-item active">
+          <a routerLink="/prodouct-details" class="nav-link waves-light" mdbWavesEffect style="color: black">Men</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link waves-light" mdbWavesEffect style="color:black;">
+  
+          Women</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link waves-light" mdbWavesEffect style="color: black">Children</a>
+        </li>
+  
+  
+        <li class="nav-item dropdown" dropdown>
+            <a routerLink="/mycart" dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect style="color: black; font-weight: bold;"><i class="fas fa-shopping-cart"></i>My-Cart</a>
+          
+          </li>
+  
+        <!-- Dropdown -->
+        
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect style="color: black; font-weight: bold;"><i class="fas fa-user-circle"></i>
+            Profile<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu" style="width: 300px;margin: 20px;padding: 30px;">
+            <div class="row"><div class="col-sm-6">
+              
+            <a routerLink="/signup" class="dropdown-item waves-light" mdbWavesEffect href="#"  style="font-weight: bold;background: rgb(250, 115, 48);padding: 10px;color: white;text-align: center"> Sign Uo</a></div>
+            <div class="col-sm-6"><a routerLink="/login" class="dropdown-item waves-light" mdbWavesEffect href="#" style="font-weight: bold;background: rgb(250, 115, 48);padding: 10px;color: white;text-align: center;">Login</a></div></div>
+            <br>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#"> <i class="far fa-user"></i>My Account</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#"> <i class="far fa-user"></i>Orders</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#"><i class="fas fa-shopping-bag"></i>Wish List</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+          </div>
+        </li>
+     
+  
+      <!-- Links -->
+  
+      <!-- Search form -->
+      <form class="form-inline waves-light" mdbWavesEffect style="margin-right: 150px;">
+        <div class="form-group">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Search for Product" style="border-color:white;height: 50px;margin-left:20px;background-color: rgb(238, 238, 238);border-block:rgb(238, 238, 238) ">
+          <button class="btn btn-danger" mdbBtn gradient="peach" style="margin-left: 20px;height: 48px;width: 150px; " > Search</button>
+        </div>
+      </form>
+  
+    
+    </ul>
+    
+  
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>

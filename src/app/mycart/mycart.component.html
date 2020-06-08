@@ -1,0 +1,95 @@
+
+            
+            <div class="cartempty" *ngIf = "items == ''">
+                    <i class="fas fa-shopping-cart" id="icon"></i>
+        <h2  > Cart is empty!</h2>
+        <a  routerLink="/">Continue Shopping</a>
+      
+            </div>
+        
+   
+        <main id="mainContainer">
+       
+          <!-- Main Container -->
+          <div class="container" >
+  
+              <section class="section">
+                 
+                  <!-- Shopping Cart table -->
+                  <div class="table-responsive">
+                     
+                      <table class="table product-table" *ngFor="let item of items">
+                         
+                          <!-- Table head -->
+                          <thead  >
+                            <br>
+                            <br>
+                              <tr style="justify-content: center;" >
+                                  <th></th>
+                                  <th>Product</th>
+                                
+                        
+                                  <th>Price</th>
+                                  <th>QTY</th>
+                                  <th>Amount</th>
+                                  <th></th>
+                              </tr>
+                          </thead>
+                          <!-- /.Table head -->
+  
+                          <!-- Table body -->
+                          <tbody>
+  
+                              <!-- First row -->
+                              <tr >
+                                  <th scope="row">
+                                      <img src="{{item.product.src}}" alt="" class="img-fluid z-depth-0" style="height: 200px;">
+                                  </th>
+                                  <td>
+                                      <h5><strong> {{item.product.name}}</strong></h5>
+                                      
+                                  </td>
+                            
+                <td>{{item.product.price}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.product.price * item.quantity}}</td>
+                             
+                            
+                                  <td>
+                                      <button type="button"  mdbBtn gradient="peach" (click)="remove(item.product.id)" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Remove item">X
+                                      </button>
+                                  </td>
+                              </tr>
+                              <!-- /.First row -->
+  
+                            
+  
+                              <!-- Fourth row -->
+                              <tr>
+                                  <td colspan="3"></td>
+                                  <td>
+                                      <h4><strong>Total</strong></h4></td>
+                                  <td>
+                                      <h4><strong>{{total}}</strong></h4></td>
+                                  <td colspan="3">
+                                      <button type="button" routerLink="/orderpage"  mdbBtn gradient="peach" class="btn btn-primary">Complete purchase <i class="fa fa-angle-right right"></i></button>
+                                  </td>
+                              </tr>
+                              <!-- /.Fourth row -->
+  
+                          </tbody>
+                          <!-- /.Table body -->
+                          
+                      </table>
+                      
+                  </div>
+                  <!-- /.Shopping Cart table -->
+                  
+              </section>
+  
+          </div>
+          <!-- /.Main Container -->
+          
+      </main>
+  
+  

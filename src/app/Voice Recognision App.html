@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MdbAngularFree</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<style>
+@font-face {
+  font-family: myFirstFont;
+  src: url(assets/Nexa-Light.otf);
+}
+
+</style>
+<body>
+
+    <button class="talk" style="background-color: brown;border-color:brown;padding: 30px;color:white">Talk To Me</button>
+    <h1 class="content"></h1>
+
+
+    <script>
+      const btn = document.querySelector(".talk");
+      const cont = document.querySelector(".content");
+
+       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+       const recognition = new SpeechRecognition();
+
+       recognition.onstart = function(){
+         console.log('voice is Activated, you can use microfone');
+       }
+ 
+      recognition.onresult = function(event){
+        const current = event.resultIndex;
+
+        const transcript = event.result[current][0].transcript;
+        cont.textContent = transcript;
+      };
+
+      btn.addEventListener('click', () =>{
+        recognition.start();
+      })
+
+
+
+      </script>
+    </body>
